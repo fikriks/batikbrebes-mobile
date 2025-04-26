@@ -58,11 +58,6 @@ public class ScannerActivity extends AppCompatActivity {
                     isScanned = true;
                     String qrContent = result.getText();
 
-                    // Tampilkan Toast dengan hasil scan
-                    Toast.makeText(ScannerActivity.this,
-                            "Scan Berhasil: " + qrContent,
-                            Toast.LENGTH_SHORT).show();
-
                     // Panggil API dengan QR code yang di-scan
                     fetchProductData(qrContent);
                 }

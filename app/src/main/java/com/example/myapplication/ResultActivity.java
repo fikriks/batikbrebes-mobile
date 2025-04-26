@@ -3,11 +3,13 @@ package com.example.myapplication;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
 public class ResultActivity extends AppCompatActivity {
@@ -20,6 +22,7 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         // Inisialisasi view
+        ImageView ivProduk = findViewById(R.id.ivProduk);
         TextView tvKodeAsli = findViewById(R.id.tvKodeAsli);
         TextView tvMotif = findViewById(R.id.tvMotif);
         TextView tvTanggalProduksi = findViewById(R.id.tvTanggalProduksi);
@@ -43,6 +46,27 @@ public class ResultActivity extends AppCompatActivity {
 
             if (produkResponse.getStatus() == 200 && produkResponse.getData() != null) {
                 ProdukResponse.Produk produk = produkResponse.getData();
+
+                // Mendapatkan URL lengkap untuk gambar
+                String relativeImagePath = produk.getFoto_produk_path();
+                Log.d(TAG, "Relative image path: " + produk.getFoto_produk_path());
+
+                if (relativeImagePath != null && !relativeImagePath.isEmpty()) {
+                    // Hilangkan slash di depan path jika ada
+                    if (relativeImagePath.startsWith("/")) {
+                        relativeImagePath = relativeImagePath.substring(1);
+                    }
+
+                    String fullImageUrl = relativeImagePath;
+
+                    Glide.with(this)
+                            .load(fullImageUrl)
+                            .placeholder(R.drawable.placeholder_image)
+                            .error(R.drawable.error_image)
+                            .into(ivProduk);
+                } else {
+                    ivProduk.setImageResource(R.drawable.error_image); // Tampilkan gambar error jika path kosong
+                }
 
                 // Mengisi TextView dengan data produk
                 tvKodeAsli.setText("Kode Produk: " + produk.getKode_asli());

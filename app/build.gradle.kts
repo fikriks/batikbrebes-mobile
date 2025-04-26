@@ -57,13 +57,13 @@ dependencies {
 
     // Untuk keamanan dan penyimpanan kunci di Android KeyStore
     implementation ("androidx.security:security-crypto:1.1.0-alpha06")
-    implementation ("com.google.code.gson:gson:2.10.1")
     // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-// Converter JSON untuk Retrofit
+    // Converter JSON untuk Retrofit
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-// Gson (jika belum ada)
+    // Gson
     implementation ("com.google.code.gson:gson:2.10.1")
-
+    // Glide
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
 }
 

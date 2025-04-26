@@ -41,13 +41,22 @@
         <LinearLayout
             android:id="@+id/resultContainer"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_below="@id/titleText"
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:background="#F5F5F5"
             android:elevation="2dp">
+
+            <ImageView
+                android:id="@+id/ivProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:contentDescription="Foto Produk"
+                android:layout_marginBottom="16dp"/>
 
             <!-- Kode Asli -->
             <TextView
@@ -115,13 +124,11 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kembali"
-            android:layout_below="@id/resultContainer"
+            android:layout_below="@+id/resultContainer"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
             android:backgroundTint="#6200EE"
-            android:textColor="#FFFFFF"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp"/>
+            android:text="Kembali"
+            android:textColor="#FFFFFF" />
     </RelativeLayout>
 </ScrollView>
