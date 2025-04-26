@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:name=".ScannerActivity">
+
+    <!-- Camera Preview Surface (ganti ke ZXing DecoratedBarcodeView) -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Scanner Frame Overlay -->
+    <ImageView
+        android:id="@+id/scanner_frame"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/qr_frame"
+        android:contentDescription="QR Scanner Frame"
+        android:adjustViewBounds="true" />
+
+    <!-- Instruction Text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arahkan kamera ke QR Code"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_above="@id/btn_close"
+        android:layout_marginBottom="32dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2" />
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tutup Scanner"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="@android:color/white"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp" />
+
+    <!-- Torch Toggle Button -->
+    <ImageButton
+        android:id="@+id/btn_torch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_flash_off"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Toggle Flashlight" />
+
+</RelativeLayout>
