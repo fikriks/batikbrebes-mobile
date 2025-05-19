@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    tools:context=".UsageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Banner -->
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img"
+            android:contentDescription="Developer Team"
+            android:layout_alignParentTop="true" />
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PETUNJUK PENGGUNAAN"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_below="@id/bannerImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Isi Petunjuk -->
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleText"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="#F5F5F5"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:text="1. Buka aplikasi.\n\n2. Klik tombol Mulai Pemindaian.\n\n3. Arahkan Kamera ke QR code.\n\n4. Lihat hasil verifikasi."/>
+
+        <!-- Tombol Kembali -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kembali"
+            android:layout_below="@id/tvInstructions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp" />
+    </RelativeLayout>
+</ScrollView>

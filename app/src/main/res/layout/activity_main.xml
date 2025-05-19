@@ -71,6 +71,35 @@
             android:textSize="14sp"
             android:gravity="center"
             android:layout_marginTop="8dp"/>
+        <!-- Button Petunjuk -->
+
     </LinearLayout>
+    <!-- Tombol Petunjuk - Pojok Kiri Bawah -->
+    <ImageButton
+        android:id="@+id/buttonPetunjuk"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_info_background"
+        android:src="@drawable/ic_info"
+        android:contentDescription="Petunjuk"
+        android:scaleType="centerInside"
+        app:tint="#444444"/>
+
+    <!-- Tombol Developer - Pojok Kanan Bawah -->
+    <ImageButton
+        android:id="@+id/buttonDeveloper"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_info_background"
+        android:src="@drawable/ic_person"
+        android:contentDescription="Info Developer"
+        android:scaleType="centerInside"
+        app:tint="#444444"/>
 
 </RelativeLayout>

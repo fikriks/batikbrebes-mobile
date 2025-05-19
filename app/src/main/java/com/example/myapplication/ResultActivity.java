@@ -102,6 +102,5 @@ public class ResultActivity extends AppCompatActivity {
     private void showErrorAndExit(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
         Log.e(TAG, message);
-        finish();
     }
 }

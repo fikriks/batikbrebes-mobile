@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Warna background -->
+    <solid android:color="@color/white" /> <!-- Ganti dengan warna yang diinginkan -->
+
+    <!-- Ukuran (opsional) -->
+    <size
+        android:width="100dp"
+        android:height="100dp"/>
+
+    <!-- Border (opsional) -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/black"/>
+
+    <!-- Padding (opsional) -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp"/>
+</shape>
