@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -84,7 +85,10 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         // Button kembali
-        btnBack.setOnClickListener(v -> finish());
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
     }
 
     // Format harga dengan pemisah ribuan

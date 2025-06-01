@@ -116,7 +116,8 @@ public class ScannerActivity extends AppCompatActivity {
                         Toast.makeText(ScannerActivity.this, "Gagal memproses data", Toast.LENGTH_LONG).show();
                     }
                     isScanned = false; // Reset langsung agar bisa scan lagi
-                    finish();
+                    Intent intent = new Intent(ScannerActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
 
